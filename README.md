@@ -1,9 +1,9 @@
-Getting Started With SatoripopCropImagesBundle
+Getting Started With SatoripopImagesBundle
 ===================================
 
 This simplistic bundles provides a wrapping layer for the Imagine Class and implements simple tools for image uploads and thumbnail generation.
 
-##### Quick access: [Prerequisites](https://github.com/Satoripop/SatoripopCropImagesBundle#prerequisites) - [Installation](https://github.com/Satoripop/SatoripopCropImagesBundle#installation)
+##### Quick access: [Prerequisites](https://github.com/Satoripop/SatoripopImagesBundle#prerequisites) - [Installation](https://github.com/Satoripop/SatoripopImagesBundle#installation)
 
 ## Prerequisites
 
@@ -26,14 +26,14 @@ For more information about translations, check [Symfony documentation](http://sy
 
 ## Installation
 
-### Step 1: Download SatoripopCropImagesBundle using composer
+### Step 1: Download SatoripopImagesBundle using composer
 
-Add SatoripopCropImagesBundle in your composer.json:
+Add SatoripopImagesBundle in your composer.json:
 
 ```js
 {
     "require": {
-        "satoripophq/crop-images-bundle": "dev-master"
+        "Satoripophq/crop-images-bundle": "dev-master"
     }
 }
 ```
@@ -41,7 +41,7 @@ Add SatoripopCropImagesBundle in your composer.json:
 Now tell composer to download the bundle by running the command:
 
 ``` bash
-$ php composer.phar update satoripophq/crop-images-bundle
+$ php composer.phar update Satoripophq/crop-images-bundle
 ```
 
 Composer will install the bundle to your project's `vendor/Satoripop` directory.
@@ -71,7 +71,7 @@ and place your `Image` class in it.
 namespace Acme\ImageBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Satoripop\CropImagesBundle\Entity\Image as BaseImage;
+use Satoripop\ImagesBundle\Entity\Image as BaseImage;
 
 /**
  * Image
@@ -163,9 +163,9 @@ class Image extends BaseImage
 }
 ```
 
-### Step 3: Configure the SatoripopCropImagesBundle
+### Step 3: Configure the SatoripopImagesBundle
 
-Now that you have included  the SatoripopCropImagesBundle into your project, the next step is to configure the bundle to work with
+Now that you have included  the SatoripopImagesBundle into your project, the next step is to configure the bundle to work with
 the specific needs of your application.
 
 Add the following configuration to your `config.yml` file according to which type
@@ -196,15 +196,15 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Satoripop\CropImagesBundle\SatoripopCropImagesBundle(),
+        new Satoripop\ImagesBundle\SatoripopImagesBundle(),
     );
 }
 ```
 
-### Step 5: Import SatoripopCropImagesBundle routing files
+### Step 5: Import SatoripopImagesBundle routing files
 
 Now that you have activated and configured the bundle, all that is left to do is
-import the SatoripopCropImagesBundle routing files.
+import the SatoripopImagesBundle routing files.
 
 By importing the routing files you will have ready made pages for managing images and creating thumbnails.
 
@@ -223,7 +223,7 @@ sp_images_routes:
 
 #crud routing (optional)
 sp_images_crud:
-    resource: "@SatoripopCropImagesBundle/Resources/config/routing/image.xml"
+    resource: "@SatoripopImagesBundle/Resources/config/routing/image.xml"
     prefix: /images
 
 ```

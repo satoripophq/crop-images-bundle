@@ -1,14 +1,14 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\Listener;
+namespace Satoripop\ImagesBundle\Listener;
 
-use Satoripop\CropImagesBundle\Services\PathMaker;
+use Satoripop\ImagesBundle\Services\PathMaker;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\Form\FormFactoryInterface;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\Form\FormEvent;
-use Satoripop\CropImagesBundle\Entity\Image;
+use Satoripop\ImagesBundle\Entity\Image;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class ImageTypeListener implements EventSubscriberInterface

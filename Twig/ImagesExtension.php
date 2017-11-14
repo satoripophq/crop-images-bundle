@@ -1,9 +1,9 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\Twig;
+namespace Satoripop\ImagesBundle\Twig;
 
-use Satoripop\CropImagesBundle\Entity\Image;
-use Satoripop\CropImagesBundle\Services\ImageProcessor;
+use Satoripop\ImagesBundle\Entity\Image;
+use Satoripop\ImagesBundle\Services\ImageProcessor;
 use Symfony\Component\Routing\Router;
 use Symfony\Component\Translation\TranslatorInterface;
 
@@ -168,7 +168,7 @@ class ImagesExtension extends \Twig_Extension
                 return $this->router->generate('image_not_found', array('w' => reset($size), 'h' => end($size), 'text' => str_replace(' ', '__', strtolower($this->trans->trans($options["text"])))));
                 break;
             default:
-                return $this->router->generate('image_not_found', array('w' => reset($size), 'h' => end($size), 'text' => str_replace(' ', '__', strtolower($this->trans->trans('image.not_found', array(), 'SatoripopCropImagesBundle')))));
+                return $this->router->generate('image_not_found', array('w' => reset($size), 'h' => end($size), 'text' => str_replace(' ', '__', strtolower($this->trans->trans('image.not_found', array(), 'SatoripopImagesBundle')))));
                 break;
         }
     }

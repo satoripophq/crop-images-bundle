@@ -1,6 +1,6 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\Router;
+namespace Satoripop\ImagesBundle\Router;
 
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Config\Loader\LoaderResolverInterface;
@@ -68,39 +68,39 @@ class RoutesLoader implements LoaderInterface
         $upload_prefix = str_replace($this->write_to, '', $this->upload_dir);
 
         $routes->add('image_thumb', new Route($cache_prefix . '/{w}x{h}/{filter}__{mode}__{image}', array(
-                '_controller' => 'SatoripopCropImagesBundle:Show:thumb',
+                '_controller' => 'SatoripopImagesBundle:Show:thumb',
                 'mode' => "center",
             ),
             array('w' => '\d{1,}', 'h' => '\d{1,}', 'image' => '.*', 'mode' => '.*', 'filter' => '.*')
         ));
 
         $routes->add('image_phantom', new Route('phantom/{w}x{h}/{mode}__{image}', array(
-                '_controller' => 'SatoripopCropImagesBundle:Show:phantom',
+                '_controller' => 'SatoripopImagesBundle:Show:phantom',
                 'mode' => "center",
             ),
             array('w' => '\d{1,}', 'h' => '\d{1,}', 'image' => '.*', 'mode' => '.*')
         ));
 
         $routes->add('image_full', new Route($upload_prefix . '/{image}', array(
-                '_controller' => 'SatoripopCropImagesBundle:Show:full',
+                '_controller' => 'SatoripopImagesBundle:Show:full',
             ),
             array('image' => '.*')
         ));
 
         $routes->add('image_not_found', new Route($cache_prefix . '/not-found/text/{w}x{h}__{text}.png', array(
-                '_controller' => 'SatoripopCropImagesBundle:Show:imagesNotFoundText',
+                '_controller' => 'SatoripopImagesBundle:Show:imagesNotFoundText',
             ),
             array('w' => '\d{1,}', 'h' => '\d{1,}', 'text' => '.*')
         ));
 
         $routes->add('image_not_found_icon', new Route($cache_prefix . '/not-found/icon/{w}x{h}__{icon}', array(
-                '_controller' => 'SatoripopCropImagesBundle:Show:imagesNotFoundIcon',
+                '_controller' => 'SatoripopImagesBundle:Show:imagesNotFoundIcon',
             ),
             array('w' => '\d{1,}', 'h' => '\d{1,}', 'icon' => '.*')
         ));
 
         $routes->add('image_not_found_default', new Route($cache_prefix . '/not-found/default/{w}x{h}__{default}', array(
-                '_controller' => 'SatoripopCropImagesBundle:Show:imagesNotFoundDefault',
+                '_controller' => 'SatoripopImagesBundle:Show:imagesNotFoundDefault',
             ),
             array('w' => '\d{1,}', 'h' => '\d{1,}', 'default' => '.*')
         ));

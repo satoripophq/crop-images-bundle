@@ -1,8 +1,8 @@
 <?php
-namespace Satoripop\CropImagesBundle\Form\Transformer;
+namespace Satoripop\ImagesBundle\Form\Transformer;
 
 use Doctrine\ORM\EntityManager;
-use Satoripop\CropImagesBundle\Entity\Image;
+use Satoripop\ImagesBundle\Entity\Image;
 use Symfony\Component\Form\DataTransformerInterface;
 
 class ImageTransformer implements DataTransformerInterface

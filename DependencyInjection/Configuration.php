@@ -1,6 +1,6 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\DependencyInjection;
+namespace Satoripop\ImagesBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

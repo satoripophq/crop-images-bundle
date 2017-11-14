@@ -1,12 +1,12 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\Controller;
+namespace Satoripop\ImagesBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-use Satoripop\CropImagesBundle\Entity\Image;
-use Satoripop\CropImagesBundle\Form\ImageType;
+use Satoripop\ImagesBundle\Entity\Image;
+use Satoripop\ImagesBundle\Form\ImageType;
 
 /**
  * Image controller.
@@ -35,7 +35,7 @@ class ImageController extends Controller
 
         $entities = $em->getRepository($this->class)->findAll();
 
-        return $this->render('SatoripopCropImagesBundle:Image:index.html.twig', array(
+        return $this->render('SatoripopImagesBundle:Image:index.html.twig', array(
             'entities' => $entities,
         ));
     }
@@ -60,7 +60,7 @@ class ImageController extends Controller
             return $this->redirect($this->generateUrl('image_show', array('id' => $entity->getId())));
         }
 
-        return $this->render('SatoripopCropImagesBundle:Image:new.html.twig', array(
+        return $this->render('SatoripopImagesBundle:Image:new.html.twig', array(
             'entity' => $entity,
             'form' => $form->createView(),
         ));
@@ -80,7 +80,7 @@ class ImageController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'form.create', 'attr' => array('class' => 'btn btn-primary'), 'translation_domain' => 'SatoripopCropImagesBundle'));
+        $form->add('submit', 'submit', array('label' => 'form.create', 'attr' => array('class' => 'btn btn-primary'), 'translation_domain' => 'SatoripopImagesBundle'));
 
         return $form;
     }
@@ -96,7 +96,7 @@ class ImageController extends Controller
         $entity = new $this->class();
         $form = $this->createCreateForm($entity);
 
-        return $this->render('SatoripopCropImagesBundle:Image:new.html.twig', array(
+        return $this->render('SatoripopImagesBundle:Image:new.html.twig', array(
             'entity' => $entity,
             'form' => $form->createView(),
         ));
@@ -120,7 +120,7 @@ class ImageController extends Controller
 
         $deleteForm = $this->createDeleteForm($id);
 
-        return $this->render('SatoripopCropImagesBundle:Image:show.html.twig', array(
+        return $this->render('SatoripopImagesBundle:Image:show.html.twig', array(
             'entity' => $entity,
             'delete_form' => $deleteForm->createView(),));
     }
@@ -144,7 +144,7 @@ class ImageController extends Controller
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
 
-        return $this->render('SatoripopCropImagesBundle:Image:edit.html.twig', array(
+        return $this->render('SatoripopImagesBundle:Image:edit.html.twig', array(
             'entity' => $entity,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -165,7 +165,7 @@ class ImageController extends Controller
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'form.update', 'attr' => array('class' => 'btn btn-primary'), 'translation_domain' => 'SatoripopCropImagesBundle'));
+        $form->add('submit', 'submit', array('label' => 'form.update', 'attr' => array('class' => 'btn btn-primary'), 'translation_domain' => 'SatoripopImagesBundle'));
 
         return $form;
     }
@@ -196,7 +196,7 @@ class ImageController extends Controller
             return $this->redirect($this->generateUrl('image_edit', array('id' => $id)));
         }
 
-        return $this->render('SatoripopCropImagesBundle:Image:edit.html.twig', array(
+        return $this->render('SatoripopImagesBundle:Image:edit.html.twig', array(
             'entity' => $entity,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -241,7 +241,7 @@ class ImageController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('image_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'form.delete', 'attr' => array('class' => 'btn btn-link btn-xs'), 'translation_domain' => 'SatoripopCropImagesBundle'))
+            ->add('submit', 'submit', array('label' => 'form.delete', 'attr' => array('class' => 'btn btn-link btn-xs'), 'translation_domain' => 'SatoripopImagesBundle'))
             ->getForm();
     }
 }

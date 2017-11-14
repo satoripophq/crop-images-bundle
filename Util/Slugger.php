@@ -1,6 +1,6 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\Util;
+namespace Satoripop\ImagesBundle\Util;
 
 use Behat\Transliterator\Transliterator;
 

@@ -1,15 +1,15 @@
-{% extends 'SatoripopCropImagesBundle:Layout:layout.html.twig' %}
+{% extends 'SatoripopImagesBundle:Layout:layout.html.twig' %}
 
 {% block body -%}
     <div class="page-header">
-        <h1>{{ 'title.new'|trans({},'SatoripopCropImagesBundle') }}</h1>
+        <h1>{{ 'title.new'|trans({},'SatoripopImagesBundle') }}</h1>
     </div>
-    {% form_theme form 'SatoripopCropImagesBundle:Form:forms.html.twig' %}
+    {% form_theme form 'SatoripopImagesBundle:Form:forms.html.twig' %}
     {{ form(form) }}
     <div class="btn-group btn-group-xs">
         <a class="btn btn-primary" href="{{ path('image') }}">
             <span class="glyphicon glyphicon-chevron-left"
-                  title="{{ 'action.back'|trans({},'SatoripopCropImagesBundle') }}"></span> {{ 'title.back'|trans({},'SatoripopCropImagesBundle') }}
+                  title="{{ 'action.back'|trans({},'SatoripopImagesBundle') }}"></span> {{ 'title.back'|trans({},'SatoripopImagesBundle') }}
         </a>
     </div>
 {% endblock %}

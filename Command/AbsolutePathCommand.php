@@ -1,8 +1,8 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\Command;
+namespace Satoripop\ImagesBundle\Command;
 
-use Satoripop\CropImagesBundle\Entity\Image;
+use Satoripop\ImagesBundle\Entity\Image;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

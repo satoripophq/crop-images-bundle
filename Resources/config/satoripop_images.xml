@@ -5,16 +5,16 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="sp_images.path_maker.class">Satoripop\CropImagesBundle\Services\PathMaker</parameter>
-        <parameter key="sp_images.image_processor.class">Satoripop\CropImagesBundle\Services\ImageProcessor</parameter>
-        <parameter key="sp_images.listener.class">Satoripop\CropImagesBundle\Listener\ImageListener</parameter>
+        <parameter key="sp_images.path_maker.class">Satoripop\ImagesBundle\Services\PathMaker</parameter>
+        <parameter key="sp_images.image_processor.class">Satoripop\ImagesBundle\Services\ImageProcessor</parameter>
+        <parameter key="sp_images.listener.class">Satoripop\ImagesBundle\Listener\ImageListener</parameter>
         <parameter key="sp_images.listener.connection">%sp_images.connection%</parameter>
-        <parameter key="sp_images.form.listener.class">Satoripop\CropImagesBundle\Listener\ImageTypeListener</parameter>
-        <parameter key="sp_images.form.type.sp_image.class">Satoripop\CropImagesBundle\Form\ImageType</parameter>
-        <parameter key="sp_images.form.type.sp_gallery.class">Satoripop\CropImagesBundle\Form\GalleryType</parameter>
-        <parameter key="sp_images.twig.image_extension.class">Satoripop\CropImagesBundle\Twig\ImagesExtension</parameter>
-        <parameter key="sp_images.routes.loader.class">Satoripop\CropImagesBundle\Router\RoutesLoader</parameter>
-        <parameter key="sp_images.validators.image_file">Satoripop\CropImagesBundle\Validator\Constraints\ImageFileValidator</parameter>
+        <parameter key="sp_images.form.listener.class">Satoripop\ImagesBundle\Listener\ImageTypeListener</parameter>
+        <parameter key="sp_images.form.type.sp_image.class">Satoripop\ImagesBundle\Form\ImageType</parameter>
+        <parameter key="sp_images.form.type.sp_gallery.class">Satoripop\ImagesBundle\Form\GalleryType</parameter>
+        <parameter key="sp_images.twig.image_extension.class">Satoripop\ImagesBundle\Twig\ImagesExtension</parameter>
+        <parameter key="sp_images.routes.loader.class">Satoripop\ImagesBundle\Router\RoutesLoader</parameter>
+        <parameter key="sp_images.validators.image_file">Satoripop\ImagesBundle\Validator\Constraints\ImageFileValidator</parameter>
     </parameters>
 
     <services>

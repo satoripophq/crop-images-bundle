@@ -1,9 +1,9 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\Form;
+namespace Satoripop\ImagesBundle\Form;
 
-use Satoripop\CropImagesBundle\Entity\Image;
-use Satoripop\CropImagesBundle\Form\Transformer\ImageCollectionTransformer;
+use Satoripop\ImagesBundle\Entity\Image;
+use Satoripop\ImagesBundle\Form\Transformer\ImageCollectionTransformer;
 use Symfony\Bridge\Doctrine\Form\EventListener\MergeDoctrineCollectionListener;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -82,7 +82,7 @@ class GalleryType extends FileType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'translation_domain' => 'SatoripopCropImagesBundle',
+            'translation_domain' => 'SatoripopImagesBundle',
             'required' => false,
             'empty_data' => null,
             'multiple' => true,

@@ -1,9 +1,9 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\Form;
+namespace Satoripop\ImagesBundle\Form;
 
-use Satoripop\CropImagesBundle\Form\Transformer\ImageTransformer;
-use Satoripop\CropImagesBundle\Listener\ImageTypeListener;
+use Satoripop\ImagesBundle\Form\Transformer\ImageTransformer;
+use Satoripop\ImagesBundle\Listener\ImageTypeListener;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -48,8 +48,8 @@ class ImageType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('file', 'file', array('label' => 'form.file', 'translation_domain' => 'SatoripopCropImagesBundle',));
-        $builder->add('file_data', 'hidden', array('label' => false, 'translation_domain' => 'SatoripopCropImagesBundle',));
+        $builder->add('file', 'file', array('label' => 'form.file', 'translation_domain' => 'SatoripopImagesBundle',));
+        $builder->add('file_data', 'hidden', array('label' => false, 'translation_domain' => 'SatoripopImagesBundle',));
         $builder->add('phantomPath', 'hidden', array('label' => false));
         $builder->addModelTransformer(new ImageTransformer($this->em));
         $builder->addEventSubscriber($this->imageTypeListener);
