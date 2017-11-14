@@ -1,10 +1,10 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\Entity;
+namespace Satoripop\ImagesBundle\Entity;
 
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Satoripop\CropImagesBundle\Validator\Constraints as CustomAssert;
+use Satoripop\ImagesBundle\Validator\Constraints as CustomAssert;
 
 /**
  * Image

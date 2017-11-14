@@ -1,18 +1,18 @@
-{% extends 'SatoripopCropImagesBundle:Layout:layout.html.twig' %}
+{% extends 'SatoripopImagesBundle:Layout:layout.html.twig' %}
 
 {% block body -%}
     {% spaceless %}
-        <h1>{{ 'title.list'|trans({},'SatoripopCropImagesBundle') }}</h1>
+        <h1>{{ 'title.list'|trans({},'SatoripopImagesBundle') }}</h1>
 
         <table class="table table-striped">
             <thead>
             <tr>
                 <th></th>
-                <th>{{ 'entity.update_date'|trans({},'SatoripopCropImagesBundle') }}</th>
-                <th>{{ 'entity.filesize'|trans({},'SatoripopCropImagesBundle') }}</th>
-                <th>{{ 'entity.size'|trans({},'SatoripopCropImagesBundle') }}</th>
-                <th>{{ 'entity.xiff'|trans({},'SatoripopCropImagesBundle') }}</th>
-                <th>{{ 'entity.actions'|trans({},'SatoripopCropImagesBundle') }}</th>
+                <th>{{ 'entity.update_date'|trans({},'SatoripopImagesBundle') }}</th>
+                <th>{{ 'entity.filesize'|trans({},'SatoripopImagesBundle') }}</th>
+                <th>{{ 'entity.size'|trans({},'SatoripopImagesBundle') }}</th>
+                <th>{{ 'entity.xiff'|trans({},'SatoripopImagesBundle') }}</th>
+                <th>{{ 'entity.actions'|trans({},'SatoripopImagesBundle') }}</th>
             </tr>
             </thead>
             <tbody>
@@ -25,8 +25,8 @@
                     <td>{{ entity.xiff }}</td>
                     <td>
                         <div class="btn-group btn-group-xs">
-                            <a class="btn btn-default" href="{{ path('image_show', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-eye-open" title="{{ 'action.show'|trans({},'SatoripopCropImagesBundle') }}"></span></a>
-                            <a class="btn btn-default" href="{{ path('image_edit', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-pencil" title="{{ 'action.edit'|trans({},'SatoripopCropImagesBundle') }}"></span></a>
+                            <a class="btn btn-default" href="{{ path('image_show', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-eye-open" title="{{ 'action.show'|trans({},'SatoripopImagesBundle') }}"></span></a>
+                            <a class="btn btn-default" href="{{ path('image_edit', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-pencil" title="{{ 'action.edit'|trans({},'SatoripopImagesBundle') }}"></span></a>
                         </div>
                     </td>
                 </tr>
@@ -34,7 +34,7 @@
             </tbody>
         </table>
         <a class="btn btn-primary btn-xs" href="{{ path('image_new') }}">
-            <span class="glyphicon glyphicon-plus-sign"></span> {{ 'title.add'|trans({},'SatoripopCropImagesBundle') }}
+            <span class="glyphicon glyphicon-plus-sign"></span> {{ 'title.add'|trans({},'SatoripopImagesBundle') }}
         </a>
         <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">

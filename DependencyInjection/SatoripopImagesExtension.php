@@ -1,6 +1,6 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\DependencyInjection;
+namespace Satoripop\ImagesBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -40,8 +40,8 @@ class SatoripopImagesExtension extends Extension
         $container->setParameter('twig.form.resources', array_merge(
             $container->getParameter('twig.form.resources'),
             array(
-                'SatoripopCropImagesBundle:Form:sp_image-prototype.html.twig',
-                'SatoripopCropImagesBundle:Form:sp_gallery-prototype.html.twig',
+                'SatoripopImagesBundle:Form:sp_image-prototype.html.twig',
+                'SatoripopImagesBundle:Form:sp_gallery-prototype.html.twig',
             )
         ));
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));

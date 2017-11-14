@@ -1,6 +1,6 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\Services;
+namespace Satoripop\ImagesBundle\Services;
 
 /**
  *

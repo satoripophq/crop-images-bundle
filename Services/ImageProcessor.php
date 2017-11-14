@@ -1,6 +1,6 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\Services;
+namespace Satoripop\ImagesBundle\Services;
 
 use Imagine\Filter\FilterInterface;
 use Imagine\Filter\Transformation;

@@ -1,17 +1,17 @@
 <?php
-namespace Satoripop\CropImagesBundle\Listener;
+namespace Satoripop\ImagesBundle\Listener;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\Common\Proxy\Exception;
 use Doctrine\Common\EventSubscriber;
-use Satoripop\CropImagesBundle\Entity\Image;
-use Satoripop\CropImagesBundle\Util\Slugger;
+use Satoripop\ImagesBundle\Entity\Image;
+use Satoripop\ImagesBundle\Util\Slugger;
 use Imagine\Gd\Imagine;
 use Imagine\Filter\Transformation;
 use Imagine\Image\Box;
 use Imagine\Image\ImageInterface;
-use Satoripop\CropImagesBundle\Services\PathMaker;
+use Satoripop\ImagesBundle\Services\PathMaker;
 use Imagine\Image\Point;
 use Symfony\Component\Validator\Constraints\DateTime;
 

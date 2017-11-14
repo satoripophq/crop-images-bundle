@@ -1,7 +1,7 @@
 {
   "name": "satoripophq/crop-images-bundle",
   "type": "symfony-bundle",
-  "description": "Symfony SatoripopCropImagesBundle",
+  "description": "Symfony SatoripopImagesBundle",
   "keywords": ["Image management"],
   "homepage": "http://www.satoripop.com",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "symfony/validator": "~2.1"
   },
   "autoload": {
-    "psr-0": {"Satoripop\\CropImagesBundle": ""}
+    "psr-0": {"Satoripop\\ImagesBundle": ""}
   },
-  "target-dir": "Satoripop/CropImagesBundle"
+  "target-dir": "Satoripop/ImagesBundle"
 }

@@ -1,8 +1,8 @@
-{% extends 'SatoripopCropImagesBundle:Layout:layout.html.twig' %}
+{% extends 'SatoripopImagesBundle:Layout:layout.html.twig' %}
 
 {% block body -%}
-    {% form_theme delete_form 'SatoripopCropImagesBundle:Form:icon_button.html.twig' %}
-    <h1>{{ 'title.show'|trans({},'SatoripopCropImagesBundle') }} <span class="badge pull-right">{{ form(delete_form) }}</span></h1>
+    {% form_theme delete_form 'SatoripopImagesBundle:Form:icon_button.html.twig' %}
+    <h1>{{ 'title.show'|trans({},'SatoripopImagesBundle') }} <span class="badge pull-right">{{ form(delete_form) }}</span></h1>
 
     <table class="table table-striped">
         <tbody>
@@ -12,41 +12,41 @@
                     <img src="{{ entity|thumb('250x250') }}" class="img-thumbnail"/>
                 </a>
             </td>
-            <th>{{ 'entity.filename'|trans({},'SatoripopCropImagesBundle') }}</th>
+            <th>{{ 'entity.filename'|trans({},'SatoripopImagesBundle') }}</th>
             <td>{{ entity.path }}</td>
         </tr>
         <tr>
-            <th>{{ 'entity.mime_type'|trans({},'SatoripopCropImagesBundle') }}</th>
+            <th>{{ 'entity.mime_type'|trans({},'SatoripopImagesBundle') }}</th>
             <td>{{ entity.mimeType }}</td>
         </tr>
         <tr>
-            <th>{{ 'entity.upload_date'|trans({},'SatoripopCropImagesBundle') }}</th>
+            <th>{{ 'entity.upload_date'|trans({},'SatoripopImagesBundle') }}</th>
             <td>{{ entity.uploadedAt|date('Y-m-d H:i:s') }}</td>
         </tr>
         <tr>
-            <th>{{ 'entity.update_date'|trans({},'SatoripopCropImagesBundle') }}</th>
+            <th>{{ 'entity.update_date'|trans({},'SatoripopImagesBundle') }}</th>
             <td>{{ entity.updatedAt|date('Y-m-d H:i:s') }}</td>
         </tr>
         <tr>
-            <th>{{ 'entity.filesize'|trans({},'SatoripopCropImagesBundle') }}</th>
+            <th>{{ 'entity.filesize'|trans({},'SatoripopImagesBundle') }}</th>
             <td>{{ entity.fileSize|file_size }}</td>
         </tr>
         <tr>
-            <th>{{ 'entity.size'|trans({},'SatoripopCropImagesBundle') }}</th>
+            <th>{{ 'entity.size'|trans({},'SatoripopImagesBundle') }}</th>
             <td>{{ entity.width }}x{{ entity.height }}</td>
         </tr>
         <tr>
-            <th>{{ 'entity.xiff'|trans({},'SatoripopCropImagesBundle') }}</th>
+            <th>{{ 'entity.xiff'|trans({},'SatoripopImagesBundle') }}</th>
             <td>{{ entity.xiff }}</td>
         </tr>
         </tbody>
     </table>
     <div class="btn-group">
         <a class="btn btn-primary btn-xs" href="{{ path('image') }}">
-            <span class="glyphicon glyphicon-chevron-left" title="{{ 'action.back'|trans({},'SatoripopCropImagesBundle') }}"></span> {{ 'title.back'|trans({},'SatoripopCropImagesBundle') }}
+            <span class="glyphicon glyphicon-chevron-left" title="{{ 'action.back'|trans({},'SatoripopImagesBundle') }}"></span> {{ 'title.back'|trans({},'SatoripopImagesBundle') }}
         </a>
         <a class="btn btn-primary btn-xs" href="{{ path('image_edit', { 'id': entity.id }) }}">
-            <span class="glyphicon glyphicon-pencil" title="{{ 'action.edit'|trans({},'SatoripopCropImagesBundle') }}"></span> {{ 'title.edit'|trans({},'SatoripopCropImagesBundle') }}
+            <span class="glyphicon glyphicon-pencil" title="{{ 'action.edit'|trans({},'SatoripopImagesBundle') }}"></span> {{ 'title.edit'|trans({},'SatoripopImagesBundle') }}
         </a>
     </div>
     <script>

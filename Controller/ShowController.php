@@ -1,6 +1,6 @@
 <?php
 
-namespace Satoripop\CropImagesBundle\Controller;
+namespace Satoripop\ImagesBundle\Controller;
 
 use Imagine\Image\Point;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
