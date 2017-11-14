@@ -1,0 +1,12 @@
+{% extends 'SatoripopCropImagesBundle:Layout:layout.html.twig' %}
+
+{% block body -%}
+    {% form_theme delete_form 'SatoripopCropImagesBundle:Form:icon_button.html.twig' %}
+
+    <h1>{{ 'title.edit'|trans({},'SatoripopCropImagesBundle') }} <span class="badge pull-right">{{ form(delete_form) }}</span></h1>
+    {% form_theme edit_form 'SatoripopCropImagesBundle:Form:forms.html.twig' %}
+    {{ form(edit_form) }}
+    <div class="btn-group">
+        <a class="btn btn-primary btn-xs" href="{{ path('image') }}"><span class="glyphicon glyphicon-chevron-left" title="{{ 'action.back'|trans({},'SatoripopCropImagesBundle') }}"></span> {{ 'title.back'|trans({},'SatoripopCropImagesBundle') }}</a>
+    </div>
+{% endblock %}

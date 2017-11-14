@@ -1,0 +1,31 @@
+# Form field labels
+form:
+    file: "Image file :"
+    delete: Delete
+    update: Update
+    create: Create
+    confirm_delete: Are you sure you want to delete this item?
+title:
+    list: Images list
+    add: Add image
+    new: New image
+    edit: Edit image
+    show: Image details
+    back: Back to list
+entity:
+    filename: File name
+    mime_type: Image Type
+    upload_date: Uploaded at
+    update_date: Updated at
+    filesize: File size
+    size: Image size
+    width: Width
+    height: Height
+    xiff: XIFF Data
+    actions: Actions
+    loading: Loading...
+action:
+    show: Show
+    edit: Edit
+image:
+    not_found: No image
