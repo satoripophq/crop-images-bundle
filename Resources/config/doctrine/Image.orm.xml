@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <mapped-superclass name="Satoripop\ImagesBundle\Entity\Image" table="sp_image">
+    <field name="path" type="string" column="path" length="128" nullable="false"/>
+    <field name="absolutePath" type="string" column="absolute_path" length="255" nullable="false"/>
+    <field name="mimeType" type="string" column="mime_type" length="45" nullable="false"/>
+    <field name="uploadedAt" type="datetime" column="uploaded_at" nullable="false"/>
+    <field name="updatedAt" type="datetime" column="updated_at" nullable="false"/>
+    <field name="fileSize" type="string" column="file_size" length="45" nullable="false"/>
+    <field name="width" type="integer" column="width" nullable="false"/>
+    <field name="height" type="integer" column="height" nullable="false"/>
+    <field name="xiff" type="json_array" column="xiff" nullable="true"/>
+    <field name="meta_data" type="json_array" column="meta_data" nullable="true"/>
+  </mapped-superclass>
+</doctrine-mapping>

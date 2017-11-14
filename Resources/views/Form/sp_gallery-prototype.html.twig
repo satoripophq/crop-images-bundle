@@ -1,0 +1,9 @@
+{% block sp_gallery_widget %}
+    {% spaceless %}
+        {% for child in form %}
+            <div class="clearfix"></div>
+            {{ form_widget(child) }}
+        {% endfor %}
+        <input type="{{ type }}" {{ block('widget_attributes') }}/>
+    {% endspaceless %}
+{% endblock %}

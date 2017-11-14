@@ -1,0 +1,13 @@
+{% block sp_image_widget %}
+    {% spaceless %}
+        <div id="{{ id }}_container">
+        {% if value and value.id %}
+            <img id="{{ id }}_image" src="{{ value|thumb(thumb_size, thumb_options) }}" class="img-thumbnail"/>
+            <div class="clearfix"></div>
+            <a href="#" onclick="if(confirm('{{ 'form.confirm_delete'|trans({}, translation_domain) }}')) { document.getElementById('{{ id }}').removeChild(document.getElementById('{{ id }}').firstChild);document.getElementById('{{ form.file_data.vars.id }}').value = '{\'remove\':true}';document.getElementById('{{ id }}_image').parentNode.removeChild(document.getElementById('{{ id }}_image'));this.parentNode.removeChild(this);} return false;">{{ "form.delete"|trans({}, translation_domain) }}</a>
+        {% endif %}
+        <div class="clearfix"></div>
+        {{ form_widget(form) }}
+        </div>
+    {% endspaceless %}
+{% endblock %}

@@ -1,9 +1,0 @@
-{% block submit_widget %}
-    {% spaceless %}
-        {% set type = type|default('submit') %}
-        {% if label is empty %}
-            {% set label = name|humanize %}
-        {% endif %}
-        <button type="{{ type|default('button') }}" {{ block('button_attributes') }} style="color: #fff;"><span class="glyphicon glyphicon-trash"></span> {{ label|trans({}, translation_domain)|raw }}</button>
-    {% endspaceless %}
-{% endblock submit_widget %}
