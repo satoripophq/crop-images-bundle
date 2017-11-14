@@ -33,7 +33,7 @@ Add SatoripopCropImagesBundle in your composer.json:
 ```js
 {
     "require": {
-        "Satoripop/crop-images-bundle": "dev-master"
+        "satoripophq/crop-images-bundle": "dev-master"
     }
 }
 ```
