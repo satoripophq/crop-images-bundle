@@ -41,7 +41,7 @@ Add SatoripopCropImagesBundle in your composer.json:
 Now tell composer to download the bundle by running the command:
 
 ``` bash
-$ php composer.phar update Satoripop/crop-images-bundle
+$ php composer.phar update satoripophq/crop-images-bundle
 ```
 
 Composer will install the bundle to your project's `vendor/Satoripop` directory.
