@@ -158,7 +158,7 @@ class ImageListener implements EventSubscriber
             if ($image->getPhantomPath()) {
                 $image->setPhantomPath($this->phantom_folder . $image->getPhantomPath());
             }
-            dump($image->getMetaData());
+
             $image->setPath($this->generateImagePath($image->getMetaData(), $image->getPhantomPath() ? pathinfo($image->getPhantomPath(), PATHINFO_EXTENSION) : $image->getFile()->guessExtension()));
             $image->setAbsolutePath($image->getPhantomPath() ? $image->getPhantomPath() : $this->upload_path . '/' . $image->getPath());
             $image->setMimeType($image->getPhantomPath() ? mime_content_type($image->getPhantomPath()) : $image->getFile()->getClientMimeType());
